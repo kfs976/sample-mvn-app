@@ -1,0 +1,18 @@
+# terraform-script.yml
+# Sample GitHub Actions workflow to run Terraform commands
+
+name: Some Terraform Script
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
